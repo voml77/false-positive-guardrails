@@ -22,3 +22,16 @@ Metrics:
 - Alerts per time unit
 
 No guardrails. No mitigation. By design.
+
+## Observed Behavior (MVP-1)
+
+Even with simple baseline methods (Z-Score, IQR), the system exhibits:
+
+- A noticeable false positive rate (FPR)
+- Low precision despite acceptable recall
+- A high number of alerts per day
+
+This highlights a core issue of model-only anomaly detection:
+operational noise emerges long before operational trust.
+
+At this stage, no mitigation or decision logic is applied by design.
