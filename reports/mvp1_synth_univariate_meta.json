@@ -1,0 +1,105 @@
+{
+  "config": {
+    "seed": 42,
+    "start": "2026-01-01 00:00:00",
+    "freq": "1min",
+    "periods": 10080,
+    "n_features": 1,
+    "feature_names": [
+      "value"
+    ],
+    "base_level": 10.0,
+    "daily_seasonality_amp": 1.2,
+    "weekly_seasonality_amp": 0.6,
+    "trend_slope": 0.0,
+    "heteroskedastic_noise": true,
+    "noise_sigma_low": 0.15,
+    "noise_sigma_high": 0.55,
+    "missing_rate": 0.004,
+    "dropout_burst_prob": 0.02,
+    "dropout_burst_min": 3,
+    "dropout_burst_max": 25,
+    "anomaly_rate_events_per_day": 0.6,
+    "spike_prob": 0.45,
+    "level_shift_prob": 0.15,
+    "drift_prob": 0.1,
+    "burst_prob": 0.1,
+    "spike_magnitude_range": [
+      2.5,
+      6.0
+    ],
+    "level_shift_range": [
+      -2.0,
+      3.0
+    ],
+    "drift_slope_range": [
+      0.0005,
+      0.003
+    ],
+    "burst_sigma_multiplier_range": [
+      2.0,
+      4.0
+    ],
+    "spike_min": 1,
+    "spike_max": 3,
+    "level_shift_min": 30,
+    "level_shift_max": 120,
+    "drift_min": 60,
+    "drift_max": 360,
+    "burst_min": 10,
+    "burst_max": 120,
+    "out_dir": "reports",
+    "out_csv_name": "mvp1_synth_univariate.csv",
+    "out_meta_name": "mvp1_synth_univariate_meta.json"
+  },
+  "n_events": 6,
+  "events": [
+    {
+      "event_id": 0,
+      "type": "spike",
+      "start_idx": 2377,
+      "end_idx": 2380,
+      "magnitude": 3.176003413242816
+    },
+    {
+      "event_id": 1,
+      "type": "spike",
+      "start_idx": 8956,
+      "end_idx": 8957,
+      "magnitude": 3.8574857575953656
+    },
+    {
+      "event_id": 2,
+      "type": "burst",
+      "start_idx": 5552,
+      "end_idx": 5639,
+      "sigma_multiplier": 2.015229408445134
+    },
+    {
+      "event_id": 3,
+      "type": "level_shift",
+      "start_idx": 1115,
+      "end_idx": 1187,
+      "shift": 1.9237042395472421
+    },
+    {
+      "event_id": 4,
+      "type": "spike",
+      "start_idx": 6155,
+      "end_idx": 6158,
+      "magnitude": 2.513798163864386
+    },
+    {
+      "event_id": 5,
+      "type": "drift",
+      "start_idx": 2780,
+      "end_idx": 3028,
+      "slope_per_min": 0.0017359268580249838
+    }
+  ],
+  "class_balance": {
+    "positives": 414,
+    "negatives": 9666,
+    "positive_rate": 0.04107142857142857
+  }
+}
