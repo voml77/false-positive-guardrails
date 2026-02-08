@@ -48,3 +48,7 @@ on the same data and with identical evaluation criteria shows:
 
 This confirms that false positives persist even with more sophisticated models
 when no decision or guardrail logic is applied.
+
+## MVP-3: Decision Engine (Operational Logic Layer)
+Next milestone introduces a deterministic decision layer (confirmation, cooldown, overrides)
+to reduce alert noise without changing the underlying model.
