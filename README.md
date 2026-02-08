@@ -35,3 +35,16 @@ This highlights a core issue of model-only anomaly detection:
 operational noise emerges long before operational trust.
 
 At this stage, no mitigation or decision logic is applied by design.
+
+## Observed Behavior (MVP-2)
+
+Using more advanced models (Isolation Forest, Autoencoder, Variational Autoencoder)
+on the same data and with identical evaluation criteria shows:
+
+- False positives accumulate over time across all models
+- Model complexity does not reliably reduce false positive rate
+- Alerts cluster around seasonal patterns and structural transitions
+- Latent representations do not prevent operational alert noise
+
+This confirms that false positives persist even with more sophisticated models
+when no decision or guardrail logic is applied.
