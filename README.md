@@ -52,3 +52,19 @@ when no decision or guardrail logic is applied.
 ## MVP-3: Decision Engine (Operational Logic Layer)
 Next milestone introduces a deterministic decision layer (confirmation, cooldown, overrides)
 to reduce alert noise without changing the underlying model.
+
+## MVP-3: Decision Engine (Operational Logic Layer)
+
+MVP-3 introduces a deterministic guardrail layer that consumes raw model predictions
+and outputs operational alert decisions.
+
+Implemented guardrails (v1):
+- **N-in-a-row confirmation (N=3)**: no single prediction can trigger an alert
+- **Cooldown window (60 min)**: after an alert, further alerts are suppressed for a period
+
+Result (on the same dataset and metrics):
+- **Model-only** produced frequent alerts (operational noise)
+- **Decision Engine** reduced alert noise to near-zero in this run
+
+This is intentional: the goal of MVP-3 is to demonstrate that false positives
+are primarily a **system design problem**, not a model problem.

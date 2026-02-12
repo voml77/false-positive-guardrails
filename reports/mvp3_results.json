@@ -1,0 +1,34 @@
+{
+  "model": "VAE",
+  "threshold_q": 0.995,
+  "decision_config": {
+    "n_in_a_row": 3,
+    "cooldown_minutes": 60
+  },
+  "before_model_only": {
+    "confusion": {
+      "tp": 3,
+      "fp": 48,
+      "tn": 9618,
+      "fn": 411
+    },
+    "precision": 0.058823529411764705,
+    "recall": 0.007246376811594203,
+    "f1": 0.012903225806451613,
+    "fpr": 0.004965859714463066,
+    "alerts_per_day": 7.285714285714286
+  },
+  "after_decision_engine": {
+    "confusion": {
+      "tp": 0,
+      "fp": 0,
+      "tn": 9666,
+      "fn": 414
+    },
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "fpr": 0.0,
+    "alerts_per_day": 0.0
+  }
+}
